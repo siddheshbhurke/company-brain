@@ -1,0 +1,38 @@
+[
+  {
+    "ticket_id": "TKT-5001",
+    "customer_id": "CUST-1001",
+    "order_id": "ORD-18291",
+    "category": "refund",
+    "priority": "high",
+    "status": "open",
+    "description": "Customer requests a full refund for Professional Laptop."
+  },
+  {
+    "ticket_id": "TKT-5002",
+    "customer_id": "CUST-1002",
+    "order_id": "ORD-18292",
+    "category": "refund",
+    "priority": "medium",
+    "status": "open",
+    "description": "Customer reports camera defect and requests refund."
+  },
+  {
+    "ticket_id": "TKT-5003",
+    "customer_id": "CUST-1003",
+    "order_id": "ORD-18293",
+    "category": "complaint",
+    "priority": "medium",
+    "status": "open",
+    "description": "Customer has contacted support twice about a delayed resolution."
+  },
+  {
+    "ticket_id": "TKT-5004",
+    "customer_id": "CUST-1004",
+    "order_id": "ORD-18294",
+    "category": "complaint",
+    "priority": "low",
+    "status": "open",
+    "description": "Customer reports dissatisfaction with delivery experience."
+  }
+]

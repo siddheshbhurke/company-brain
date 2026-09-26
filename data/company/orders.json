@@ -1,0 +1,57 @@
+[
+  {
+    "order_id": "ORD-18291",
+    "customer_id": "CUST-1001",
+    "product": "Professional Laptop",
+    "amount": 75000,
+    "order_date": "2026-09-05",
+    "delivery_date": "2026-09-10",
+    "status": "delivered",
+    "returnable": true,
+    "refund_status": "none"
+  },
+  {
+    "order_id": "ORD-18292",
+    "customer_id": "CUST-1002",
+    "product": "Mirrorless Camera",
+    "amount": 42000,
+    "order_date": "2026-09-08",
+    "delivery_date": "2026-09-13",
+    "status": "delivered",
+    "returnable": true,
+    "refund_status": "none"
+  },
+  {
+    "order_id": "ORD-18293",
+    "customer_id": "CUST-1003",
+    "product": "Gaming Monitor",
+    "amount": 28000,
+    "order_date": "2026-08-20",
+    "delivery_date": "2026-08-25",
+    "status": "delivered",
+    "returnable": true,
+    "refund_status": "none"
+  },
+  {
+    "order_id": "ORD-18294",
+    "customer_id": "CUST-1004",
+    "product": "Wireless Headphones",
+    "amount": 12000,
+    "order_date": "2026-09-12",
+    "delivery_date": "2026-09-16",
+    "status": "delivered",
+    "returnable": true,
+    "refund_status": "none"
+  },
+  {
+    "order_id": "ORD-18295",
+    "customer_id": "CUST-1005",
+    "product": "Tablet",
+    "amount": 36000,
+    "order_date": "2026-08-01",
+    "delivery_date": "2026-08-05",
+    "status": "delivered",
+    "returnable": false,
+    "refund_status": "none"
+  }
+]

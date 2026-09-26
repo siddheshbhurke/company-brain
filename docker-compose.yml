@@ -1,0 +1,42 @@
+services:
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: company-brain-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: company_brain
+      POSTGRES_USER: company_brain
+      POSTGRES_PASSWORD: company_brain_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U company_brain -d company_brain"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  neo4j:
+    image: neo4j:5-community
+    container_name: company-brain-neo4j
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: neo4j/company_brain_dev
+      NEO4J_PLUGINS: '["apoc"]'
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+      - neo4j_import:/var/lib/neo4j/import
+      - neo4j_plugins:/plugins
+
+volumes:
+  postgres_data:
+  neo4j_data:
+  neo4j_logs:
+  neo4j_import:
+  neo4j_plugins:

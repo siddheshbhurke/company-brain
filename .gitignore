@@ -28,3 +28,6 @@ Thumbs.db
 
 # Generated data
 data/generated/
+
+# Temporary files
+*.tmp

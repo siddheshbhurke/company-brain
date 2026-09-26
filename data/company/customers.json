@@ -1,0 +1,37 @@
+[
+  {
+    "customer_id": "CUST-1001",
+    "name": "Aarav Mehta",
+    "email": "aarav.mehta@example.com",
+    "tier": "gold",
+    "city": "Pune"
+  },
+  {
+    "customer_id": "CUST-1002",
+    "name": "Isha Kulkarni",
+    "email": "isha.kulkarni@example.com",
+    "tier": "silver",
+    "city": "Mumbai"
+  },
+  {
+    "customer_id": "CUST-1003",
+    "name": "Rohan Shah",
+    "email": "rohan.shah@example.com",
+    "tier": "gold",
+    "city": "Ahmedabad"
+  },
+  {
+    "customer_id": "CUST-1004",
+    "name": "Neha Patil",
+    "email": "neha.patil@example.com",
+    "tier": "standard",
+    "city": "Pune"
+  },
+  {
+    "customer_id": "CUST-1005",
+    "name": "Kabir Joshi",
+    "email": "kabir.joshi@example.com",
+    "tier": "silver",
+    "city": "Bengaluru"
+  }
+]

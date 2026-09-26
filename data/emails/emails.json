@@ -1,0 +1,18 @@
+[
+  {
+    "email_id": "EMAIL-001",
+    "from": "customer@example.com",
+    "to": "support@techmart.example",
+    "subject": "Refund request for ORD-18291",
+    "body": "I would like a full refund for my Professional Laptop order ORD-18291.",
+    "timestamp": "2026-09-20T10:30:00"
+  },
+  {
+    "email_id": "EMAIL-002",
+    "from": "ops.manager@techmart.example",
+    "to": "support@techmart.example",
+    "subject": "High value refund approval",
+    "body": "Refunds above INR 50000 must be approved by Customer Operations Manager.",
+    "timestamp": "2026-09-20T11:00:00"
+  }
+]

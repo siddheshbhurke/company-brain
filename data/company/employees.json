@@ -1,0 +1,26 @@
+[
+  {
+    "employee_id": "EMP-001",
+    "name": "Priya Sharma",
+    "role": "Customer Support Agent",
+    "department": "Customer Operations"
+  },
+  {
+    "employee_id": "EMP-002",
+    "name": "Vikram Desai",
+    "role": "Customer Operations Manager",
+    "department": "Customer Operations"
+  },
+  {
+    "employee_id": "EMP-003",
+    "name": "Ananya Rao",
+    "role": "Sales Representative",
+    "department": "Sales"
+  },
+  {
+    "employee_id": "EMP-004",
+    "name": "Rahul Kapoor",
+    "role": "Sales Manager",
+    "department": "Sales"
+  }
+]

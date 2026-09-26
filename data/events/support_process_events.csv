@@ -1,0 +1,15 @@
+case_id,event,timestamp,employee_id
+TKT-5001,ticket_created,2026-09-20T10:30:00,EMP-001
+TKT-5001,ticket_assigned,2026-09-20T10:35:00,EMP-001
+TKT-5001,refund_validation_started,2026-09-20T10:40:00,EMP-001
+TKT-5001,manager_approval_requested,2026-09-20T10:45:00,EMP-001
+TKT-5002,ticket_created,2026-09-19T09:00:00,EMP-001
+TKT-5002,ticket_assigned,2026-09-19T09:10:00,EMP-001
+TKT-5002,refund_validation_started,2026-09-19T09:30:00,EMP-001
+TKT-5002,refund_approved,2026-09-19T09:45:00,EMP-002
+TKT-5003,ticket_created,2026-09-18T09:00:00,EMP-001
+TKT-5003,ticket_assigned,2026-09-18T09:15:00,EMP-001
+TKT-5003,tier1_response,2026-09-18T10:00:00,EMP-001
+TKT-5003,escalated,2026-09-18T14:00:00,EMP-001
+TKT-5003,tier2_response,2026-09-18T15:00:00,EMP-002
+TKT-5003,resolved,2026-09-19T11:00:00,EMP-002

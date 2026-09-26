@@ -1,0 +1,16 @@
+[
+  {
+    "message_id": "SLACK-001",
+    "channel": "#customer-operations",
+    "author": "EMP-002",
+    "timestamp": "2026-09-20T11:00:00",
+    "message": "Reminder: refunds above INR 50,000 require manager approval before execution."
+  },
+  {
+    "message_id": "SLACK-002",
+    "channel": "#customer-operations",
+    "author": "EMP-001",
+    "timestamp": "2026-09-20T11:05:00",
+    "message": "For high-value refunds, validate the order and eligibility before requesting approval."
+  }
+]
