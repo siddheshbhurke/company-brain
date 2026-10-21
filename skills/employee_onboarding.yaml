@@ -1,0 +1,55 @@
+
+skill_id: employee_onboarding
+name: Employee Onboarding
+version: "1.0.0"
+description: >
+  Coordinate employee onboarding using approved company
+  procedures and authorized internal tools.
+
+risk_level: medium
+status: draft
+
+inputs:
+  - employee_id
+  - start_date
+  - department
+
+outputs:
+  - onboarding_plan
+  - completion_status
+
+capabilities:
+  - employee_lookup
+  - document_retrieval
+  - task_management
+  - notification_service
+
+constraints:
+  - Use current approved HR policies.
+  - Do not expose confidential employee information.
+  - Require authorization before modifying employee records.
+
+steps:
+  - order: 1
+    name: retrieve_hr_policy
+    action: retrieve_approved_hr_policy
+    tool_name: document_retrieval
+
+  - order: 2
+    name: validate_employee
+    action: validate_employee_record
+    tool_name: employee_lookup
+
+  - order: 3
+    name: prepare_onboarding_plan
+    action: prepare_onboarding_checklist
+
+  - order: 4
+    name: create_onboarding_tasks
+    action: create_onboarding_tasks
+    tool_name: task_management
+
+  - order: 5
+    name: notify_responsible_team
+    action: notify_onboarding_team
+    tool_name: notification_service
