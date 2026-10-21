@@ -1,0 +1,83 @@
+
+skill_id: process_refund
+name: Process Customer Refund
+version: "1.0.0"
+description: >
+  Validate a customer refund request, evaluate the refund policy,
+  obtain required approval, and prepare a controlled refund workflow.
+
+risk_level: high
+status: active
+policy_reference: TM-REFUND-001
+policy_version: "2.1"
+
+input_schema:
+  required:
+    - customer_id
+    - order_id
+    - refund_amount
+
+approval:
+  required_when: "refund_amount > 50000"
+  role: Customer Operations Manager
+  block_execution_until_approved: true
+
+safety:
+  execute_refund_before_validation: false
+  execute_refund_before_required_approval: false
+  reject_already_refunded_orders: true
+
+steps:
+  - order: 1
+    name: validate_customer
+    action: validate_customer
+    tool_name: customer_lookup
+    requires_approval: false
+
+  - order: 2
+    name: retrieve_order
+    action: retrieve_order
+    tool_name: order_lookup
+    requires_approval: false
+
+  - order: 3
+    name: check_eligibility
+    action: check_refund_eligibility
+    tool_name: refund_rule_engine
+    requires_approval: false
+
+  - order: 4
+    name: evaluate_policy
+    action: evaluate_refund_policy
+    tool_name: refund_rule_engine
+    requires_approval: false
+
+  - order: 5
+    name: request_manager_approval
+    action: request_approval
+    tool_name: approval_service
+    requires_approval: true
+
+  - order: 6
+    name: execute_refund
+    action: execute_refund
+    tool_name: refund_service
+    requires_approval: true
+
+  - order: 7
+    name: update_ticket
+    action: update_support_ticket
+    tool_name: ticket_service
+    requires_approval: false
+
+  - order: 8
+    name: notify_customer
+    action: notify_customer
+    tool_name: notification_service
+    requires_approval: false
+
+  - order: 9
+    name: record_audit
+    action: record_execution_audit
+    tool_name: audit_service
+    requires_approval: false
