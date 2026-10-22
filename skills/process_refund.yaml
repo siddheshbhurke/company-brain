@@ -6,6 +6,41 @@ description: >
   Validate a customer refund request, evaluate the refund policy,
   obtain required approval, and prepare a controlled refund workflow.
 
+
+inputs:
+  - customer_id
+  - order_id
+  - refund_amount
+  - refund_reason
+
+outputs:
+  - refund_eligibility
+  - approval_status
+  - refund_status
+  - support_ticket_status
+  - audit_record
+
+capabilities:
+  - validate_customer_identity
+  - retrieve_order_details
+  - evaluate_refund_policy
+  - determine_refund_eligibility
+  - request_manager_approval
+  - execute_authorized_refunds
+  - update_support_tickets
+  - notify_customers
+  - record_audit_events
+
+constraints:
+  - Verify customer identity and order details before evaluating a refund.
+  - Apply the configured refund policy and eligibility rules.
+  - Require manager approval when policy or refund thresholds demand it.
+  - Never execute a refund without the required authorization.
+  - Do not invent missing customer, order, or policy information.
+  - Record the outcome of each workflow step.
+  - Stop and request clarification when required inputs are missing.
+
+
 risk_level: high
 status: active
 policy_reference: TM-REFUND-001

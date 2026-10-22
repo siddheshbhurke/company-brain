@@ -1,8 +1,13 @@
+
+from pathlib import Path
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
-class Settings(BaseSettings):
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
+
+class Settings(BaseSettings):
     APP_NAME: str = "Company Brain"
     APP_VERSION: str = "0.1.0"
 
@@ -16,11 +21,11 @@ class Settings(BaseSettings):
     NEO4J_USER: str = "neo4j"
     NEO4J_PASSWORD: str = "company_brain_dev"
 
-    GEMINI_API_KEY: str
+    GEMINI_API_KEY: str = ""
 
     model_config = SettingsConfigDict(
-        env_file="../.env",
-        extra="ignore"
+        env_file=PROJECT_ROOT / ".env",
+        extra="ignore",
     )
 
     @property
